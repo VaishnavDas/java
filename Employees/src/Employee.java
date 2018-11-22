@@ -1,24 +1,35 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Employee {
 	
+		
+	
 	private  String ID;
 	private  String Name;
-	private  long Phone;
+	private  String Phone;
 	private  String Email;
 	
 	
 	
 	
-	public Employee(String ID, String Name, long Phone,  String Email ) {
+	public Employee(String ID, String Name, String Phone,  String Email ) {
 		
 		this. Name = Name;
 		this. ID = ID.toLowerCase();
 		this. Phone = Phone;
 		this.Email = Email;
+	
 	}
 	
+	/*public Employee() {
+		
+		  String ID;
+		  String Name;
+		  long Phone;
+		  String Email;	
+	
+
+	}*/
 	public  String getID() {
 		
 		return ID;	
@@ -40,14 +51,14 @@ public class Employee {
 		this. Name= Name;
 	}
 	
-	public  long getPhone() {
+	public  String getPhone() {
 		
 		return Phone;
 	}
 	
-	public void setPhone(long Phone) {
+	public void setPhone(String value) {
 		
-		this. Phone= Phone;
+		this. Phone= value;
 		
 	}
 	
@@ -62,16 +73,22 @@ public class Employee {
 		this.Email= Email;
 		
 	}
-
-
-
-public static void duplicate(List<Employee> emp) {
 	
-	List<String> list= new ArrayList<>();
-	for(Employee employee:emp) {
+	public String toString() {
 		
-		String var = employee.getID();
-		if(!list.contains(employee)) {
+		return this.ID+" "+this.Name+" "+this.Phone+" "+this.Email;
+	}
+
+}
+	
+
+/*public static void duplicate(List<Employee> fileName) {
+	
+	
+	for(Employee FileName:fileName) {
+		
+		String var = ( fileName.getID());
+		if(!list.contains(fileName)) {
 		//list.add(var);
 			
 			System.out.println(" No Invalid data");
@@ -85,8 +102,7 @@ public static void duplicate(List<Employee> emp) {
 	
 	}
 }
-}
-		
+}*/
 	
 	
 	
